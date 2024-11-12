@@ -47,6 +47,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
     private lateinit var popupWindow: PopupWindow
     private var imageName: String? = null
     private var filePath: File? = null
+
     private var month: String? = null
     private var year: Int? = null
 
