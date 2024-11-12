@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profile.OtherUserProfileFragment">
+
+    <include layout="@layout/layout_common_toolbar"
+        android:id="@+id/toolbar"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="ivUserPic,divider2,tvUserName,tvAddress,tvConnectionCount,tvConnection,tvRatingCount,tvRating,tvEditProfile,tabProfile,user_info_pager"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_shade_2"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivUserPic"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:src="@drawable/user_placeholder"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lorem_ipsum"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        app:layout_constraintTop_toBottomOf="@+id/ivUserPic"/>
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lorem_ipsum"
+        android:textColor="@color/dark_grey_shade_1"
+        android:gravity="center"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName"/>
+
+    <TextView
+        android:id="@+id/tvConnectionCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="837"
+        android:textColor="@color/theme_blue"
+        android:textAppearance="@style/TextAppearance.Gigzz.Headline5"
+        app:layout_constraintTop_toTopOf="@+id/divider2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/divider2"/>
+
+    <TextView
+        android:id="@+id/tvConnection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connections"
+        android:textAppearance="@style/TextAppearance.Gigzz.Body2"
+        app:layout_constraintStart_toStartOf="@+id/tvConnectionCount"
+        app:layout_constraintTop_toBottomOf="@+id/tvConnectionCount"
+        app:layout_constraintEnd_toEndOf="@+id/tvConnectionCount"/>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="2dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@color/dark_grey_shade_1"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvRatingCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="837"
+        android:textColor="@color/theme_blue"
+        android:textAppearance="@style/TextAppearance.Gigzz.Headline5"
+        app:layout_constraintTop_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/divider2"/>
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rating"
+        android:textAppearance="@style/TextAppearance.Gigzz.Body2"
+        app:layout_constraintStart_toStartOf="@+id/tvRatingCount"
+        app:layout_constraintTop_toBottomOf="@+id/tvRatingCount"
+        app:layout_constraintEnd_toEndOf="@+id/tvRatingCount"/>
+
+    <TextView
+        android:id="@+id/tvEditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:text="@string/action_connect"
+        android:textAppearance="@style/TextAppearance.Gigzz.Body2"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_8sdp"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:background="@drawable/home_bottom_nav_bg"
+        app:layout_constraintTop_toBottomOf="@+id/divider2"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabProfile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvEditProfile"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/user_info_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tabProfile"
+        app:layout_constraintStart_toStartOf="@id/tabProfile"
+        app:layout_constraintTop_toBottomOf="@id/tabProfile" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:indeterminateTint="@color/theme_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

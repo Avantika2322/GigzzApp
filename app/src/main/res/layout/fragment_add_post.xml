@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_shade_1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.AddPostFragment"
+    tools:ignore="contentDescription">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".97" />
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/back_icon_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/post_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/create_post"
+        android:textAppearance="@style/TextAppearance.Gigzz.Subtitle1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/back_btn"
+        app:layout_constraintStart_toEndOf="@id/back_btn"
+        app:layout_constraintTop_toTopOf="@id/back_btn" />
+
+    <Button
+        android:id="@+id/action_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center"
+        android:text="@string/post"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.Gigzz.Button"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/user_pic"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_1sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_placeholder"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/back_btn"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+        app:strokeColor="@color/theme_blue"
+        app:strokeWidth="@dimen/_1sdp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/peopleTypeDropDown"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:background="@null"
+        android:focusableInTouchMode="false"
+        android:inputType="none"
+        android:textColor="@color/grey"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="@dimen/_10sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_10sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_10sdp"
+        app:boxCornerRadiusTopStart="@dimen/_10sdp"
+        app:boxStrokeColor="@color/drop_down_stroke_color"
+        app:endIconDrawable="@drawable/dropdown"
+        app:endIconMode="dropdown_menu"
+        app:hintEnabled="false"
+        app:layout_constraintBottom_toBottomOf="@id/user_pic"
+        app:layout_constraintStart_toEndOf="@id/user_pic"
+        app:layout_constraintTop_toTopOf="@id/user_pic">
+
+        <AutoCompleteTextView
+            android:id="@+id/etPeopleType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/everyone"
+            android:inputType="none"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:textAppearance="?textAppearanceSubtitle2" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/share_thoughts_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:autofillHints=""
+        android:background="@drawable/bg_corner_radius5dp"
+        android:gravity="start"
+        android:hint="@string/share_thoughts"
+        android:lines="12"
+        android:padding="10dp"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/user_pic"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/gallery_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:src="@drawable/image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/video_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:src="@drawable/video"
+            app:layout_constraintStart_toEndOf="@id/gallery_pick"
+            app:layout_constraintTop_toTopOf="@id/gallery_pick" />
+
+        <ImageView
+            android:id="@+id/emojiPick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:src="@drawable/emoji"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/video_pick"
+            app:layout_constraintTop_toTopOf="@id/gallery_pick" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.emoji2.emojipicker.EmojiPickerView
+        android:id="@+id/emojiPicker"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/theme_blue"
+        android:visibility="gone"
+        app:emojiGridColumns="9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/media_recycler_list" />
+
+    <!--    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/media_recycler_list"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/share_thoughts_text" />-->
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/media_recycler_list"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/share_thoughts_text" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:background="@null"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/media_recycler_list"
+        app:layout_constraintStart_toStartOf="@id/media_recycler_list"
+        app:layout_constraintTop_toBottomOf="@id/media_recycler_list"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/theme_blue"
+        android:indeterminateTint="@color/theme_blue"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/back_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

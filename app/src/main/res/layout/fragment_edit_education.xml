@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_shade_1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profile.EditEducationFragment"
+    tools:ignore="contentDescription">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/back_icon_blue"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+    <TextView
+        android:id="@+id/post_job_head"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/edit_education"
+        android:textAppearance="@style/TextAppearance.Gigzz.Body3"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/back_btn"
+        app:layout_constraintTop_toTopOf="@id/back_btn" />
+
+    <TextView
+        android:id="@+id/post_job_sub_head"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_detail_subtitle"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/post_job_head"
+        app:layout_constraintTop_toBottomOf="@id/post_job_head" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editSchool"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/text_input_stroke_selector"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/back_btn"
+        app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent"
+        app:startIconDrawable="@drawable/ic_school_icon"
+        app:startIconTint="@color/theme_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSchool"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/school"
+            android:textAppearance="?textAppearanceCaption" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editGrade"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/text_input_stroke_selector"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/editSchool"
+        app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent"
+        app:startIconDrawable="@drawable/ic_graduate_icon"
+        app:startIconTint="@color/theme_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etGrade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/grade_degree"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textAppearance="?textAppearanceCaption" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_job_start_day"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/text_input_stroke_selector"
+        app:endIconDrawable="@drawable/ic_calendar"
+        app:endIconMode="custom"
+        app:endIconTint="@color/theme_blue"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toStartOf="@id/editEndYear"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/editGrade"
+        app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+        <AutoCompleteTextView
+            android:id="@+id/etStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:hint="@string/start_year"
+            android:inputType="none"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:textAppearance="?textAppearanceCaption" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editEndYear"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/text_input_stroke_selector"
+        app:endIconDrawable="@drawable/ic_calendar"
+        app:endIconMode="custom"
+        app:endIconTint="@color/theme_blue"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/edit_job_start_day"
+        app:layout_constraintTop_toBottomOf="@id/editGrade"
+        app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+        <AutoCompleteTextView
+            android:id="@+id/etEndYear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="false"
+            android:hint="@string/end_year"
+            android:inputType="none"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:textAppearance="?textAppearanceCaption" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/currentlyPursuingCheckbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/theme_blue"
+        android:text="@string/currently_pursuing"
+        android:textAllCaps="false"
+        android:textAppearance="?textAppearanceOverline"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/edit_job_start_day" />
+
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="@string/save_changes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/currentlyPursuingCheckbox" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".02" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/theme_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profile.AddReviewFragment">
+
+    <include layout="@layout/layout_common_toolbar"
+        android:id="@+id/toolbar"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivUserPic"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/user_placeholder"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/lorem_ipsum"
+        android:textAppearance="@style/TextAppearance.Gigzz.Body3"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ivUserPic"/>
+
+    <TextView
+        android:id="@+id/tvPostTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey_shade_2"
+        android:text="@string/posting_review_publicly"
+        android:textAppearance="@style/TextAppearance.Gigzz.Caption"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_shade_3"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvPostTitle"/>
+
+    <TextView
+        android:id="@+id/tvRatingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rating_title"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+        app:layout_constraintTop_toBottomOf="@+id/divider"/>
+
+    <RatingBar
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:rating="2"
+        android:theme="@style/RatingBar"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRatingTitle"/>
+
+    <!--<RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style= "@style/CustomRatingBar"
+        android:id="@+id/ratingBar"
+        android:numStars="5"
+        android:stepSize="0.01"
+        android:isIndicator="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating"/>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

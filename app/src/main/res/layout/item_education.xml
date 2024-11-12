@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="contentDescription">
+
+    <ImageView
+        android:id="@+id/ivDot"
+        android:layout_width="@dimen/_5sdp"
+        android:layout_height="@dimen/_5sdp"
+        android:src="@drawable/ic_blue_dot"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2016"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.Gigzz.Overline"
+        app:layout_constraintTop_toTopOf="@+id/ivDot"
+        app:layout_constraintStart_toEndOf="@+id/ivDot"
+        app:layout_constraintBottom_toBottomOf="@+id/ivDot"/>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/_20sdp"
+        android:background="@color/grey_shade_2"
+        android:layout_marginTop="@dimen/_3sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ivDot"
+        app:layout_constraintStart_toStartOf="@+id/ivDot"
+        app:layout_constraintEnd_toEndOf="@+id/ivDot"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:src="@drawable/gigzz_icon"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:tint="@color/theme_blue"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+        app:strokeColor="@color/theme_blue"
+        app:strokeWidth="@dimen/_1sdp"
+        android:padding="@dimen/_1sdp"
+        app:contentPadding="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        app:layout_constraintStart_toStartOf="@+id/line1"
+        app:layout_constraintEnd_toEndOf="@+id/line1"/>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="1dp"
+        android:layout_height="@dimen/_25sdp"
+        android:background="@color/grey_shade_2"
+        android:layout_marginTop="@dimen/_3sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+        app:layout_constraintStart_toStartOf="@+id/ivLogo"
+        app:layout_constraintEnd_toEndOf="@+id/ivLogo"/>
+
+    <TextView
+        android:id="@+id/tvCollageName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/no_connection_msg"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:maxLines="2"
+        android:textAppearance="@style/TextAppearance.Gigzz.Body4"
+        app:layout_constraintTop_toTopOf="@+id/ivLogo"
+        app:layout_constraintStart_toEndOf="@+id/ivLogo"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvGrade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lorem_ipsum"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+        app:layout_constraintTop_toBottomOf="@+id/tvCollageName"
+        app:layout_constraintStart_toStartOf="@+id/tvCollageName"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvDuration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lorem_ipsum"
+        android:textColor="@color/grey_shade_2"
+        android:textAppearance="@style/TextAppearance.Gigzz.Caption2"
+        app:layout_constraintTop_toBottomOf="@+id/tvGrade"
+        app:layout_constraintStart_toStartOf="@+id/tvCollageName"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

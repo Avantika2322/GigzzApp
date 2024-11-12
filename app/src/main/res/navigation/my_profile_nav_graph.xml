@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_profile_nav_graph"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.gigzz.android.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_accountSettingFragment"
+            app:destination="@id/accountSettingFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_allEducationListFragment"
+            app:destination="@id/allEducationListFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editSkillsFragment"
+            app:destination="@id/editSkillsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.gigzz.android.ui.profile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/accountSettingFragment"
+        android:name="com.gigzz.android.ui.profile.AccountSettingFragment"
+        android:label="fragment_account_setting"
+        tools:layout="@layout/fragment_account_setting" >
+        <action
+            android:id="@+id/action_accountSettingFragment_to_blockedUsersFragment"
+            app:destination="@id/blockedUsersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allEducationListFragment"
+        android:name="com.gigzz.android.ui.profile.AllEducationListFragment"
+        android:label="fragment_all_education_list"
+        tools:layout="@layout/fragment_all_education_list" >
+        <action
+            android:id="@+id/action_allEducationListFragment_to_editEducationFragment"
+            app:destination="@id/editEducationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editEducationFragment"
+        android:name="com.gigzz.android.ui.profile.EditEducationFragment"
+        android:label="fragment_edit_education"
+        tools:layout="@layout/fragment_edit_education" />
+    <fragment
+        android:id="@+id/editSkillsFragment"
+        android:name="com.gigzz.android.ui.profile.EditSkillsFragment"
+        android:label="fragment_edit_skills"
+        tools:layout="@layout/fragment_edit_skills" />
+    <fragment
+        android:id="@+id/blockedUsersFragment"
+        android:name="com.gigzz.android.ui.profile.BlockedUsersFragment"
+        android:label="fragment_blocked_users"
+        tools:layout="@layout/fragment_blocked_users" />
+</navigation>

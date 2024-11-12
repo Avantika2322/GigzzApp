@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:strokeColor="@color/grey_shade_1"
+    android:layout_margin="10dp"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bgImg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_margin="@dimen/_7sdp"
+            android:background="@color/blue_shade_0"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/jobAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="@string/lorem_ipsum"
+            android:drawablePadding="5dp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:textAppearance="?textAppearanceCaption"
+            app:drawableStartCompat="@drawable/location_pin"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@+id/bgImg" />
+
+        <TextView
+            android:id="@+id/job_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:maxLines="2"
+            android:paddingVertical="2dp"
+            android:textColor="@color/theme_blue"
+            android:text="@string/lorem_ipsum"
+            android:textAppearance="?textAppearanceSubtitle2"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/jobAddress" />
+
+        <TextView
+            android:id="@+id/job_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/bg_corner_radius5dp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_7sdp"
+            android:text="@string/lorem_ipsum"
+            android:textAppearance="?textAppearanceSubtitle2"
+            android:textColor="@color/pink_shade_1"
+            android:textSize="11sp"
+            app:drawableStartCompat="@drawable/ic_time"
+            app:layout_constraintStart_toStartOf="@id/job_name"
+            app:layout_constraintTop_toBottomOf="@+id/job_name"
+            app:drawableTint="@color/pink_shade_1" />
+
+        <TextView
+            android:id="@+id/job_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/bg_corner_radius5dp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_7sdp"
+            android:text="@string/lorem_ipsum"
+            android:textAppearance="?textAppearanceSubtitle2"
+            android:textColor="@color/yellow_shade_1"
+            android:textSize="11sp"
+            app:drawableStartCompat="@drawable/icon_work_time"
+            app:layout_constraintStart_toEndOf="@id/job_time"
+            app:layout_constraintTop_toBottomOf="@+id/job_name"
+            app:drawableTint="@color/yellow_shade_1" />
+
+        <TextView
+            android:id="@+id/job_salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/bg_corner_radius5dp"
+            android:backgroundTint="@color/transparent_10_theme_blue"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_7sdp"
+            android:text="@string/lorem_ipsum"
+            android:visibility="gone"
+            android:textAppearance="?textAppearanceSubtitle2"
+            android:textColor="@color/theme_blue"
+            android:textSize="11sp"
+            app:drawableStartCompat="@drawable/ic_dollar"
+            app:layout_constraintStart_toEndOf="@id/job_duration"
+            app:layout_constraintTop_toBottomOf="@+id/job_name"
+            app:drawableTint="@color/theme_blue" />
+
+        <TextView
+            android:id="@+id/jobDes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="start"
+            android:padding="@dimen/_5sdp"
+            android:textAppearance="?textAppearanceCaption"
+            android:textColor="@color/grey"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toEndOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/job_time" />
+
+        <TextView
+            android:id="@+id/tvPostedDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_date"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintTop_toBottomOf="@+id/bgImg"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/job_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_corner_radius5dp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="@string/lorem_ipsum"
+            android:drawablePadding="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textAppearance="?textAppearanceSubtitle2"
+            android:textColor="@color/yellow_shade_1"
+            android:textSize="11sp"
+            android:backgroundTint="@color/transparent_10_yellow"
+            app:drawableStartCompat="@drawable/in_procress_icon"
+            app:layout_constraintTop_toBottomOf="@+id/bgImg"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".97" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.jobs.JobFilterBottomFragment">
+
+    <View
+        android:id="@+id/View1"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_corner_radius5dp"
+        android:backgroundTint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="@string/filters"
+        android:textAppearance="@style/TextAppearance.Gigzz.Headline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/View1" />
+
+    <View
+        android:id="@+id/View2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/tvFilter" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/jobStatusChip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:text="@string/job_status"
+        android:textAppearance="?textAppearanceHeadline5"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/_9sdp"
+        app:chipSpacingHorizontal="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvJobStatus"
+        app:singleLine="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tvAll"
+            style="@style/RoundedChip"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_6sdp"
+            android:text="@string/all"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_10sdp"
+            app:checkedIconEnabled="false"
+            app:chipStrokeColor="@color/grey"
+            app:closeIcon="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tvOpen"
+            style="@style/RoundedChip"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_6sdp"
+            android:text="@string/open"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_10sdp"
+            app:checkedIconEnabled="false"
+            app:chipStrokeColor="@color/grey"
+            app:closeIcon="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tvCompleted"
+            style="@style/RoundedChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_6sdp"
+            android:text="@string/completed"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_10sdp"
+            app:checkedIconEnabled="false"
+            app:chipStrokeColor="@color/grey"
+            app:closeIcon="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tvInProgress"
+            style="@style/RoundedChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_6sdp"
+            android:text="@string/in_process"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_10sdp"
+            app:checkedIconEnabled="false"
+            app:chipStrokeColor="@color/grey"
+            app:closeIcon="@null" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/tvJobStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="@string/job_status"
+        android:textAppearance="?textAppearanceHeadline5"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/View2" />
+
+    <TextView
+        android:id="@+id/tvPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="@string/payment"
+        android:textAppearance="?textAppearanceHeadline5"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jobStatusChip" />
+
+    <TextView
+        android:id="@+id/min_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/slider_payment"
+        android:textAppearance="?textAppearanceCaption"
+        android:textColor="@color/theme_blue"
+        app:layout_constraintEnd_toStartOf="@id/max_range"
+        app:layout_constraintTop_toBottomOf="@id/jobStatusChip" />
+
+    <TextView
+        android:id="@+id/max_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="@string/slider_payment_dash"
+        android:textAppearance="?textAppearanceCaption"
+        android:textColor="@color/theme_blue"
+        app:layout_constraintEnd_toEndOf="@id/sliderRange"
+        app:layout_constraintTop_toBottomOf="@id/jobStatusChip" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/sliderRange"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:stepSize="10"
+        android:valueFrom="0"
+        android:valueTo="10000"
+        app:labelBehavior="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPayment"
+        app:thumbColor="@color/white"
+        app:thumbStrokeColor="@color/theme_blue"
+        app:thumbStrokeWidth="@dimen/_2sdp"
+        app:tickVisible="false"
+        app:trackColor="@null"
+        app:trackColorActive="@color/theme_blue"
+        app:trackColorInactive="@color/grey"
+        app:values="@array/job_pay_value" />
+
+    <TextView
+        android:id="@+id/tvField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="@string/types_of_gigzz"
+        android:textAppearance="?textAppearanceHeadline5"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sliderRange" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFieldRecycler"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:layout_marginTop="36dp"
+        android:clipToPadding="false"
+        android:fadeScrollbars="false"
+        android:nestedScrollingEnabled="false"
+        android:scrollbarThumbVertical="@color/theme_blue"
+        android:scrollbars="vertical"
+        app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvField"
+        tools:listitem="@layout/item_skills" />
+
+    <TextView
+        android:id="@+id/tvJobType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="@string/job_type"
+        android:textAppearance="?textAppearanceHeadline5"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvFieldRecycler" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/jobTypeChip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:text="@string/job_type"
+        android:textAppearance="?textAppearanceHeadline5"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/_9sdp"
+        app:chipSpacingHorizontal="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvJobType"
+        app:singleLine="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tvFullTime"
+            style="@style/RoundedChip"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_6sdp"
+            android:text="@string/full_time"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_10sdp"
+            app:checkedIconEnabled="false"
+            app:chipStrokeColor="@color/grey"
+            app:closeIcon="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tvPartTime"
+            style="@style/RoundedChip"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_6sdp"
+            android:text="@string/part_time"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_10sdp"
+            app:checkedIconEnabled="false"
+            app:chipStrokeColor="@color/grey"
+            app:closeIcon="@null" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/tvBoth"
+            style="@style/RoundedChip"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_6sdp"
+            android:text="@string/both"
+            android:textAlignment="center"
+            android:textAppearance="?textAppearanceCaption"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_10sdp"
+            app:checkedIconEnabled="false"
+            app:chipStrokeColor="@color/grey"
+            app:closeIcon="@null" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/tvRadius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="@string/radius"
+        android:textAppearance="?textAppearanceHeadline5"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jobTypeChip" />
+
+    <TextView
+        android:id="@+id/radiusMinRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/slider_radius"
+        android:textAppearance="?textAppearanceCaption"
+        android:textColor="@color/theme_blue"
+        app:layout_constraintEnd_toStartOf="@id/radiusMaxRange"
+        app:layout_constraintTop_toBottomOf="@id/jobTypeChip" />
+
+    <TextView
+        android:id="@+id/radiusMaxRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="@string/slider_radius_dash"
+        android:textAppearance="?textAppearanceCaption"
+        android:textColor="@color/theme_blue"
+        app:layout_constraintEnd_toEndOf="@id/radiusSliderRange"
+        app:layout_constraintTop_toBottomOf="@id/jobTypeChip" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/radiusSliderRange"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:stepSize="10"
+        android:valueFrom="0"
+        android:valueTo="10000"
+        app:labelBehavior="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRadius"
+        app:thumbColor="@color/white"
+        app:thumbStrokeColor="@color/theme_blue"
+        app:thumbStrokeWidth="@dimen/_2sdp"
+        app:tickVisible="false"
+        app:trackColor="@null"
+        app:trackColorActive="@color/theme_blue"
+        app:trackColorInactive="@color/grey"
+        app:values="@array/job_pay_value" />
+
+    <TextView
+        android:id="@+id/tvJobAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="@string/age_requirement"
+        android:textAppearance="?textAppearanceHeadline5"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/_9sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radiusSliderRange" />
+
+    <RadioGroup
+        android:id="@+id/radioGrpAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvJobAge">
+
+        <RadioButton
+            android:id="@+id/under_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Less 18"
+            android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+            android:textColor="@color/grey" />
+
+        <RadioButton
+            android:id="@+id/mid_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="16 to 18"
+            android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+            android:textColor="@color/grey" />
+
+        <RadioButton
+            android:id="@+id/over_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="18+"
+            android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+            android:textColor="@color/grey" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioPostedTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGrpAge">
+
+        <LinearLayout
+            android:id="@+id/layoutPostedTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb24Hours"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/last_24_hours"
+                android:textAppearance="@style/TextAppearance.Gigzz.Caption"
+                android:textColor="@color/grey" />
+
+            <RadioButton
+                android:id="@+id/rb3Days"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/last_3_days"
+                android:textAppearance="@style/TextAppearance.Gigzz.Caption"
+                android:textColor="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbLastWeek"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/last_week"
+                android:textAppearance="@style/TextAppearance.Gigzz.Caption"
+                android:textColor="@color/grey" />
+
+            <RadioButton
+                android:id="@+id/rb15days"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/last_15_days"
+                android:textAppearance="@style/TextAppearance.Gigzz.Caption"
+                android:textColor="@color/grey" />
+        </LinearLayout>
+    </RadioGroup>
+
+    <View
+        android:id="@+id/viewBottomSpace"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        app:layout_constraintTop_toBottomOf="@+id/radioPostedTime"/>
+
+    <Button
+        android:id="@+id/resetBtn"
+        style="@style/Widget.App.Outline.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:backgroundTint="@color/white"
+        android:text="@string/reset"
+        android:textColor="@color/theme_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewBottomSpace" />
+
+    <Button
+        android:id="@+id/apply_filter_btn"
+        style="@style/Widget.App.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:text="@string/apply_filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/resetBtn"
+        app:layout_constraintTop_toBottomOf="@id/viewBottomSpace" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

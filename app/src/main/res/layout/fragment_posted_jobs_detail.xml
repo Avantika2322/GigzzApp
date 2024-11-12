@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.jobs.PostedJobsDetailFragment">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:src="@drawable/back_icon_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/toolTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Gigzz.Headline6"
+        android:text="@string/job_details"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintEnd_toStartOf="@+id/ivEdit"
+        app:layout_constraintStart_toEndOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="@+id/ivBack"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBack"/>
+
+    <ImageView
+        android:id="@+id/ivShare"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/ic_share"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="@+id/toolTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/toolTitle"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/ic_share"
+        android:layout_marginEnd="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="@+id/toolTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/toolTitle"
+        app:layout_constraintEnd_toStartOf="@+id/ivShare"/>
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:src="@drawable/ic_delete"
+        android:layout_marginEnd="@dimen/_12sdp"
+        app:layout_constraintTop_toTopOf="@+id/toolTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/toolTitle"
+        app:layout_constraintEnd_toStartOf="@+id/iv"/>
+
+    <ImageView
+        android:id="@+id/ivEdit"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/edit"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:padding="@dimen/_2sdp"
+        app:layout_constraintTop_toTopOf="@+id/toolTitle"
+        app:layout_constraintBottom_toBottomOf="@+id/toolTitle"
+        app:layout_constraintEnd_toStartOf="@+id/ivDelete"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/svJobDetails"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            app:strokeColor="@color/grey_shade_1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/jobDetailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tvJobTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lorem_ipsum"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/TextAppearance.Gigzz.Body2"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lorem_ipsum"
+                    android:gravity="center"
+                    android:textColor="@color/grey_shade_2"
+                    android:drawablePadding="@dimen/_3sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:textAppearance="@style/TextAppearance.Gigzz.Caption2"
+                    app:drawableStartCompat="@drawable/location"
+                    app:layout_constraintTop_toBottomOf="@+id/tvJobTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/ivPostImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/post_placeholder"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAddress"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layoutJobType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/layoutSalary"
+                    app:layout_constraintTop_toBottomOf="@+id/ivPostImg">
+                    <ImageView
+                        android:id="@+id/ivJobType"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/ic_clock"/>
+                    <TextView
+                        android:id="@+id/tvJobTypeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/job_type"
+                        android:textAppearance="@style/TextAppearance.Gigzz.Caption"/>
+
+                    <TextView
+                        android:id="@+id/tvJobType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lorem_ipsum"
+                        android:gravity="center"
+                        android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layoutSalary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintStart_toEndOf="@+id/layoutJobType"
+                    app:layout_constraintEnd_toStartOf="@id/layoutExperience"
+                    app:layout_constraintTop_toBottomOf="@+id/ivPostImg">
+                    <ImageView
+                        android:id="@+id/ivSalary"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/ic_dollor" />
+                    <TextView
+                        android:id="@+id/tvJobSalaryTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/salary"
+                        android:textAppearance="@style/TextAppearance.Gigzz.Caption"/>
+
+                    <TextView
+                        android:id="@+id/tvSalary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lorem_ipsum"
+                        android:gravity="center"
+                        android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layoutExperience"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@+id/layoutSalary"
+                    app:layout_constraintTop_toBottomOf="@+id/ivPostImg">
+                    <ImageView
+                        android:id="@+id/ivExperience"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:src="@drawable/ic_experience"/>
+
+                    <TextView
+                        android:id="@+id/tvExperienceTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/experience"
+                        android:textAppearance="@style/TextAppearance.Gigzz.Caption" />
+
+                    <TextView
+                        android:id="@+id/tvExperience"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lorem_ipsum"
+                        android:gravity="center"
+                        android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardJobDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    app:strokeColor="@color/grey_shade_1"
+                    app:strokeWidth="1dp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_45sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutJobType">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layoutJobDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_12sdp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvJobDescTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/job_description"
+                            android:textColor="@color/black"
+                            android:textAppearance="@style/TextAppearance.Gigzz.Body2"/>
+                        <TextView
+                            android:id="@+id/tvJobDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lorem_ipsum_desc"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColor="@color/dark_grey_shade_1"
+                            android:textAppearance="@style/TextAppearance.Gigzz.Caption"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminateTint="@color/theme_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

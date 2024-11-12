@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="contentDescription"
+    tools:context=".ui.profile.AboutProfileFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/layoutAboutProfile"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <com.google.android.material.card.MaterialCardView
+           android:id="@+id/cardOverView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:strokeWidth="1dp"
+           app:cardCornerRadius="@dimen/_5sdp"
+           android:elevation="0dp"
+           app:cardElevation="0dp"
+           app:strokeColor="@color/grey_shade_0"
+           app:layout_constraintTop_toTopOf="parent">
+
+           <LinearLayout
+               android:id="@+id/layoutOverView"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginVertical="@dimen/_10sdp"
+               android:layout_marginHorizontal="@dimen/_10sdp"
+               android:orientation="vertical">
+
+               <TextView
+                   android:id="@+id/tvOverviewTitle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/overview"
+                   android:textAppearance="@style/TextAppearance.Gigzz.Body4"/>
+
+               <TextView
+                   android:id="@+id/tvOverview"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/overview"
+                   android:textColor="@color/black"
+                   android:textAppearance="@style/TextAppearance.Gigzz.Caption2"/>
+
+               <TextView
+                   android:id="@+id/tvLocationTitle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/location"
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:textAppearance="@style/TextAppearance.Gigzz.Body4"/>
+
+               <TextView
+                   android:id="@+id/tvLocation"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/overview"
+                   android:textColor="@color/black"
+                   android:textAppearance="@style/TextAppearance.Gigzz.Caption2" />
+
+               <TextView
+                   android:id="@+id/tvContactTitle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/contact"
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:textAppearance="@style/TextAppearance.Gigzz.Body4"/>
+
+               <TextView
+                   android:id="@+id/tvContact"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/overview"
+                   android:textColor="@color/black"
+                   android:drawablePadding="@dimen/_5sdp"
+                   app:drawableStartCompat="@drawable/ic_phone"
+                   android:textAppearance="@style/TextAppearance.Gigzz.Caption2"/>
+           </LinearLayout>
+       </com.google.android.material.card.MaterialCardView>
+
+       <com.google.android.material.card.MaterialCardView
+           android:id="@+id/cardEducation"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:strokeWidth="1dp"
+           app:cardCornerRadius="@dimen/_5sdp"
+           android:elevation="0dp"
+           app:cardElevation="0dp"
+           app:strokeColor="@color/grey_shade_0"
+           android:layout_marginTop="@dimen/_15sdp"
+           app:layout_constraintTop_toBottomOf="@+id/cardOverView">
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/layoutEducation"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_margin="@dimen/_10sdp">
+
+               <TextView
+                   android:id="@+id/tvEducationTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/education"
+                   android:textAppearance="@style/TextAppearance.Gigzz.Body3"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"/>
+
+               <ImageView
+                   android:id="@+id/ivEditEducation"
+                   android:layout_width="@dimen/_15sdp"
+                   android:layout_height="@dimen/_15sdp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   android:src="@drawable/ic_edit"
+                   app:layout_constraintTop_toTopOf="@+id/tvEducationTitle" />
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/rvEducation"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_7sdp"
+                   android:isScrollContainer="false"
+                   android:overScrollMode="never"
+                   tools:itemCount="3"
+                   tools:listitem="@layout/item_education"
+                   app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                   app:layout_constraintTop_toBottomOf="@+id/ivEditEducation"/>
+           </androidx.constraintlayout.widget.ConstraintLayout>
+       </com.google.android.material.card.MaterialCardView>
+
+       <com.google.android.material.card.MaterialCardView
+           android:id="@+id/cardSkills"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:strokeWidth="1dp"
+           app:cardCornerRadius="@dimen/_5sdp"
+           android:elevation="0dp"
+           app:cardElevation="0dp"
+           app:strokeColor="@color/grey_shade_0"
+           android:layout_marginTop="@dimen/_15sdp"
+           app:layout_constraintTop_toBottomOf="@+id/cardEducation">
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/layoutSkills"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_margin="@dimen/_10sdp">
+
+               <TextView
+                   android:id="@+id/tvSkillTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/skills"
+                   android:textAppearance="@style/TextAppearance.Gigzz.Body4"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"/>
+
+               <ImageView
+                   android:id="@+id/ivEditSkills"
+                   android:layout_width="@dimen/_15sdp"
+                   android:layout_height="@dimen/_15sdp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   android:src="@drawable/ic_edit"
+                   app:layout_constraintTop_toTopOf="@+id/tvSkillTitle" />
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/rvSkills"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:isScrollContainer="false"
+                   android:overScrollMode="never"
+                   tools:itemCount="3"
+                   tools:listitem="@layout/item_skills"
+                   app:layout_constraintTop_toBottomOf="@+id/tvSkillTitle"/>
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+       </com.google.android.material.card.MaterialCardView>
+
+       <com.google.android.material.card.MaterialCardView
+           android:id="@+id/cardResume"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:strokeWidth="1dp"
+           app:cardCornerRadius="@dimen/_5sdp"
+           android:elevation="0dp"
+           app:cardElevation="0dp"
+           app:strokeColor="@color/grey_shade_0"
+           android:layout_marginTop="@dimen/_15sdp"
+           app:layout_constraintTop_toBottomOf="@+id/cardSkills">
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/layoutResume"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_margin="@dimen/_10sdp">
+
+               <TextView
+                   android:id="@+id/tvResumeTitle"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/resume"
+                   android:textAppearance="@style/TextAppearance.Gigzz.Body4"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"/>
+
+               <TextView
+                   android:id="@+id/ivEditResume"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/update"
+                   android:textColor="@color/white"
+                   android:paddingVertical="@dimen/_5sdp"
+                   android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+                   android:paddingHorizontal="@dimen/_12sdp"
+                   android:background="@drawable/home_bottom_nav_bg"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="@+id/tvResumeTitle" />
+
+               <TextView
+                   android:id="@+id/tvPdfName"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Jordon-hill-resume.pdf"
+                   android:layout_marginVertical="@dimen/_10sdp"
+                   android:paddingVertical="@dimen/_10sdp"
+                   android:paddingHorizontal="@dimen/_12sdp"
+                   android:drawableStart="@drawable/ic_pdf"
+                   android:drawablePadding="@dimen/_10sdp"
+                   android:background="@drawable/bg_corner_radius5dp"
+                   android:backgroundTint="@color/grey_shade_3"
+                   android:textAppearance="@style/TextAppearance.Gigzz.Body1"
+                   app:layout_constraintTop_toBottomOf="@+id/ivEditResume"
+                   app:layout_constraintBottom_toBottomOf="parent"/>
+           </androidx.constraintlayout.widget.ConstraintLayout>
+       </com.google.android.material.card.MaterialCardView>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/_30sdp"
+           app:layout_constraintTop_toBottomOf="@+id/cardResume"/>
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

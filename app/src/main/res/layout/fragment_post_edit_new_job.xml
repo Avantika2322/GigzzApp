@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.jobs.PostEditNewJobFragment"
+    tools:ignore="contentDescription">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/back_icon_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/post_job_head"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/new_job_headline"
+        android:textAppearance="@style/TextAppearance.Gigzz.Body4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivBack"
+        app:layout_constraintTop_toTopOf="@id/ivBack" />
+
+    <TextView
+        android:id="@+id/postJobSubHead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/new_job_sub_head"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/post_job_head"
+        app:layout_constraintTop_toBottomOf="@id/post_job_head" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/svPostJob"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@+id/postJobSubHead"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/postJobLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etCompanyNameLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:boxBackgroundColor="@color/light_blue_shade_1"
+                app:boxStrokeColor="@color/text_input_stroke_selector"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCompanyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/company_name"
+                    android:drawablePadding="@dimen/_7sdp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:drawableStart="@drawable/company_icon"
+                    android:drawableTint="@color/theme_blue"
+                    android:inputType="textCapWords|textAutoComplete"
+                    android:textAppearance="?textAppearanceCaption" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etJobNameLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:boxBackgroundColor="@color/light_blue_shade_1"
+                app:boxStrokeColor="@color/text_input_stroke_selector"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCompanyNameLayout"
+                app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etJobName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/job_name"
+                    android:drawablePadding="@dimen/_7sdp"
+                    android:drawableStart="@drawable/ic_bag"
+                    android:drawableTint="@color/theme_blue"
+                    android:inputType="textCapWords|textAutoComplete"
+                    android:textAppearance="?textAppearanceCaption" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etJobCategoryLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:boxBackgroundColor="@color/light_blue_shade_1"
+                app:boxStrokeColor="@color/text_input_stroke_selector"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etJobNameLayout"
+                app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/etCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/job_category"
+                    android:inputType="none"
+                    android:drawablePadding="@dimen/_7sdp"
+                    android:drawableStart="@drawable/ic_category"
+                    android:drawableTint="@color/theme_blue"
+                    android:textAppearance="?textAppearanceCaption" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etOthersLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:boxBackgroundColor="@color/light_blue_shade_1"
+                app:boxStrokeColor="@color/text_input_stroke_selector"
+                app:hintEnabled="false"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etJobCategoryLayout"
+                app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etOthers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/job_category_type"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:textAppearance="?textAppearanceCaption" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvJobTypeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/job_type"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:textAppearance="@style/TextAppearance.Gigzz.Caption2"
+                app:layout_constraintTop_toBottomOf="@+id/etOthersLayout"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupJobType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvJobTypeTitle">
+
+                <RadioButton
+                    android:id="@+id/radioFullTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/full_time"
+                    android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+                    android:textColor="@color/grey" />
+
+                <RadioButton
+                    android:id="@+id/radioPartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/part_time"
+                    android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+                    android:textColor="@color/grey" />
+
+                <RadioButton
+                    android:id="@+id/radioProject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/project"
+                    android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+                    android:textColor="@color/grey" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvAgeRequirementTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/age_requirement"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:textAppearance="@style/TextAppearance.Gigzz.Caption2"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupJobType"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupAge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAgeRequirementTitle">
+
+                <RadioButton
+                    android:id="@+id/radioUnder18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="12-15"
+                    android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+                    android:textColor="@color/grey" />
+
+                <RadioButton
+                    android:id="@+id/radioAbove16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="16+"
+                    android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+                    android:textColor="@color/grey" />
+
+                <RadioButton
+                    android:id="@+id/radioAbove18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="18+"
+                    android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+                    android:textColor="@color/grey" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etExperienceLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:boxBackgroundColor="@color/light_blue_shade_1"
+                app:boxStrokeColor="@color/text_input_stroke_selector"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupAge"
+                app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/etExperience"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/experience_required"
+                    android:inputType="none"
+                    android:drawablePadding="@dimen/_7sdp"
+                    android:drawableStart="@drawable/ic_tools"
+                    android:drawableTint="@color/theme_blue"
+                    android:textAppearance="?textAppearanceCaption" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etEnterExperienceLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                app:boxBackgroundColor="@color/light_blue_shade_1"
+                app:boxStrokeColor="@color/text_input_stroke_selector"
+                app:hintEnabled="false"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etExperienceLayout"
+                app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEnterExperience"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/enter_experience"
+                    android:inputType="textCapWords|textAutoComplete"
+                    android:textAppearance="?textAppearanceCaption" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvJobLocationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/job_location"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:textAppearance="@style/TextAppearance.Gigzz.Caption2"
+                app:layout_constraintTop_toBottomOf="@+id/etEnterExperienceLayout"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvJobLocationTitle">
+
+                <RadioButton
+                    android:id="@+id/radioRemote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/remote"
+                    android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+                    android:textColor="@color/grey" />
+
+                <RadioButton
+                    android:id="@+id/radioOnsite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/onsite"
+                    android:textAppearance="@style/TextAppearance.Gigzz.Subtitle2"
+                    android:textColor="@color/grey" />
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etAddressLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:boxBackgroundColor="@color/light_blue_shade_1"
+                app:boxStrokeColor="@color/text_input_stroke_selector"
+                app:hintEnabled="false"
+                app:startIconDrawable="@drawable/location"
+                app:startIconTint="@color/theme_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupLocation"
+                app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/address"
+                    android:inputType="text"
+                    android:textAppearance="?textAppearanceCaption" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etZipcodeLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:boxBackgroundColor="@color/light_blue_shade_1"
+                app:boxStrokeColor="@color/text_input_stroke_selector"
+                app:hintEnabled="false"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/etCityLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etAddressLayout"
+                app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etZipcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/zip_code"
+                    android:drawablePadding="@dimen/_7sdp"
+                    android:drawableStart="@drawable/ic_card"
+                    android:drawableTint="@color/theme_blue"
+                    android:inputType="textCapWords|textAutoComplete"
+                    android:textAppearance="?textAppearanceCaption" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etCityLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:boxBackgroundColor="@color/light_blue_shade_1"
+                app:boxStrokeColor="@color/text_input_stroke_selector"
+                app:hintEnabled="false"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:layout_constraintStart_toEndOf="@+id/etZipcodeLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etAddressLayout"
+                app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCityName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/location"
+                    android:drawablePadding="@dimen/_7sdp"
+                    android:drawableStart="@drawable/ic_location_map"
+                    android:drawableTint="@color/theme_blue"
+                    android:inputType="textCapWords|textAutoComplete"
+                    android:textAppearance="?textAppearanceCaption" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etSalaryLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:boxBackgroundColor="@color/light_blue_shade_1"
+                app:boxStrokeColor="@color/text_input_stroke_selector"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etZipcodeLayout"
+                app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etSalary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/salary"
+                    android:inputType="numberDecimal"
+                    android:drawablePadding="@dimen/_7sdp"
+                    android:drawableStart="@drawable/ic_dollar"
+                    android:drawableTint="@color/theme_blue"
+                    android:textAppearance="?textAppearanceCaption" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etWebUrlLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:boxBackgroundColor="@color/light_blue_shade_1"
+                app:boxStrokeColor="@color/text_input_stroke_selector"
+                app:hintEnabled="false"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etSalaryLayout"
+                app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etWebUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/web_url"
+                    android:inputType="textUri"
+                    android:drawablePadding="@dimen/_7sdp"
+                    android:drawableStart="@drawable/ic_link"
+                    android:drawableTint="@color/theme_blue"
+                    android:textAppearance="?textAppearanceCaption" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etJobDescLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:boxBackgroundColor="@color/light_blue_shade_1"
+                app:boxStrokeColor="@color/text_input_stroke_selector"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etWebUrlLayout"
+                app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etJobDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/job_description_txt"
+                    android:maxLength="2000"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine|textCapSentences|textAutoComplete"
+                    android:textAppearance="?textAppearanceCaption" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_240sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp"
+                app:strokeColor="@color/white"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/etJobDescLayout">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPhotos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="3"
+                    android:visibility="gone"
+                    tools:itemCount="6"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/post_job_image_layout"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutImage"
+                    android:layout_width="match_parent"
+                    android:background="@color/light_blue_shade_1"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ivAddImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/add_photo_1"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tvAddImageTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_image_title"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textAppearance="@style/TextAppearance.Gigzz.Caption"
+                        app:layout_constraintTop_toBottomOf="@+id/ivAddImage"/>
+
+                    <TextView
+                        android:id="@+id/tvTakePhoto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/take_photo"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:textAppearance="@style/TextAppearance.Gigzz.Body4"
+                        android:textColor="@color/theme_blue"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/bg_corner_radius5dp"
+                        android:backgroundTint="@color/light_blue_shade_2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tvUploadPhoto"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAddImageTitle"/>
+
+                    <TextView
+                        android:id="@+id/tvUploadPhoto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/upload_photo"
+                        android:background="@drawable/bg_corner_radius5dp"
+                        android:backgroundTint="@color/theme_blue"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:textAppearance="@style/TextAppearance.Gigzz.Body4"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tvTakePhoto"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAddImageTitle"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/btnFollow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/post_job"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@id/cardImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminateTint="@color/theme_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

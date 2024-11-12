@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.gigzz.android.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+
+        <action android:id="@+id/action_homeFragment_to_myProfileNavGraph"
+            app:destination="@+id/my_profile_nav_graph"/>
+
+        <action
+            android:id="@+id/action_homeFragment_to_otherUserProfileFragment"
+            app:destination="@id/otherUserProfileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_postDetailFragment"
+            app:destination="@id/postDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_videoPlayerFragment"
+            app:destination="@id/videoPlayerFragment" />
+    </fragment>
+
+    <include app:graph="@navigation/my_profile_nav_graph"/>
+
+    <fragment
+        android:id="@+id/connectionFragment"
+        android:name="com.gigzz.android.ui.connection.ConnectionFragment"
+        android:label="fragment_connection"
+        tools:layout="@layout/fragment_connection" >
+        <action
+            android:id="@+id/action_connectionFragment_to_my_profile_nav_graph"
+            app:destination="@id/my_profile_nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.gigzz.android.ui.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_my_profile_nav_graph"
+            app:destination="@id/my_profile_nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobsFragment"
+        android:name="com.gigzz.android.ui.jobs.JobsFragment"
+        android:label="fragment_jobs"
+        tools:layout="@layout/fragment_jobs" >
+        <action
+            android:id="@+id/action_jobsFragment_to_jobDetailsFragment"
+            app:destination="@id/jobDetailsFragment" />
+        <action
+            android:id="@+id/action_jobsFragment_to_my_profile_nav_graph"
+            app:destination="@id/my_profile_nav_graph" />
+        <action
+            android:id="@+id/action_jobsFragment_to_postEditNewJobFragment"
+            app:destination="@id/postEditNewJobFragment" />
+        <action
+            android:id="@+id/action_jobsFragment_to_postEditIndividualJobFragment"
+            app:destination="@id/postEditIndividualJobFragment" />
+        <action
+            android:id="@+id/action_jobsFragment_to_postedJobsDetailFragment"
+            app:destination="@id/postedJobsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPostFragment"
+        android:name="com.gigzz.android.ui.home.AddPostFragment"
+        android:label="fragment_add_post"
+        tools:layout="@layout/fragment_add_post" />
+    <fragment
+        android:id="@+id/otherUserProfileFragment"
+        android:name="com.gigzz.android.ui.profile.OtherUserProfileFragment"
+        android:label="fragment_other_user_profile"
+        tools:layout="@layout/fragment_other_user_profile" />
+
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="com.gigzz.android.ui.home.CommentsFragment"
+        android:label="fragment_comments"
+        tools:layout="@layout/fragment_comments" />
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.gigzz.android.ui.chat.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/jobDetailsFragment"
+        android:name="com.gigzz.android.ui.jobs.JobDetailsFragment"
+        android:label="fragment_job_details"
+        tools:layout="@layout/fragment_job_details" />
+    <fragment
+        android:id="@+id/postDetailFragment"
+        android:name="com.gigzz.android.ui.home.PostDetailFragment"
+        android:label="fragment_post_detail"
+        tools:layout="@layout/fragment_post_detail" />
+    <fragment
+        android:id="@+id/postEditNewJobFragment"
+        android:name="com.gigzz.android.ui.jobs.PostEditNewJobFragment"
+        android:label="fragment_post_edit_new_job"
+        tools:layout="@layout/fragment_post_edit_new_job" />
+    <fragment
+        android:id="@+id/postEditIndividualJobFragment"
+        android:name="com.gigzz.android.ui.jobs.PostEditIndividualJobFragment"
+        android:label="fragment_post_edit_individual_job"
+        tools:layout="@layout/fragment_post_edit_individual_job" />
+    <fragment
+        android:id="@+id/postedJobsDetailFragment"
+        android:name="com.gigzz.android.ui.jobs.PostedJobsDetailFragment"
+        android:label="fragment_posted_jobs_detail"
+        tools:layout="@layout/fragment_posted_jobs_detail" >
+        <action
+            android:id="@+id/action_postedJobsDetailFragment_to_postEditIndividualJobFragment"
+            app:destination="@id/postEditIndividualJobFragment" />
+        <action
+            android:id="@+id/action_postedJobsDetailFragment_to_postEditNewJobFragment"
+            app:destination="@id/postEditNewJobFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.gigzz.android.ui.home.VideoPlayerFragment"
+        android:label="fragment_video_player"
+        tools:layout="@layout/fragment_video_player" />
+
+</navigation>

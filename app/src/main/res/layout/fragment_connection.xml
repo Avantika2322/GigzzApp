@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.connection.ConnectionFragment">
+
+    <include
+        android:id="@+id/top_view"
+        layout="@layout/common_toolbar" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/viewPagerTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:textAlignment="textStart"
+        style="@style/RoundedTabLayoutStyle"
+        app:tabIndicator="@null"
+        app:tabGravity="start"
+        app:tabMode="scrollable"
+        app:tabMaxWidth="@dimen/_230sdp"
+        app:tabMinWidth="0dp"
+        app:tabInlineLabel="true"
+        app:tabPaddingStart="@dimen/_13sdp"
+        app:tabPaddingEnd="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@id/top_view"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerScreen"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewPagerTab" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

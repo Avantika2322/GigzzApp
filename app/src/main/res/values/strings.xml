@@ -1,0 +1,397 @@
+<resources>
+    <string name="app_name">Gigzz</string>
+    <string name="something_went_wro">Something went wrong! Please try again.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="onboarding_1_subtitle">Connect, Collaborate, and Earn!</string>
+    <string name="onboarding_2_subtitle">Where Teens And Young Adults Help You Get Things Done.</string>
+    <string name="onboarding_3_subtitle">Explore Engaging Projects and Earn For Your Skills.</string>
+    <string name="skip">Skip</string>
+    <string name="start">Get Started</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="enter_credentials">Please enter your credentials to continue.</string>
+    <string name="hint_mail">Enter your email id</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="create_new_password">Create New Password</string>
+    <string name="create_pass_instruction">Please create a strong password to secure your account </string>
+    <string name="enter_new_password">Enter a new password</string>
+    <string name="confirm_password">Confirm new password</string>
+    <string name="remember_password">I remember my password Sign In?</string>
+    <string name="sign_in_text">Sign In</string>
+    <string name="not_having_account"><font color="#A1A1A1">Don\'t have an account? </font>Register now</string>
+    <string name="resend_otp"><font color="#A1A1A1">Didn\'t receive the OTP?</font> Resend OTP</string>
+    <string name="register">Register</string>
+    <string name="resend_otp_text">Resend OTP</string>
+    <string name="sign_in">Sign In?</string>
+    <string name="register_now">Register now</string>
+    <string name="personal_info">Personal Information</string>
+    <string name="full_name">Full name</string>
+    <string name="create_profile">Create Your Gigzz Profile</string>
+    <string name="profile_today">Unlock Endless Opportunities: Create Your Gigzz Profile Today!</string>
+    <string name="privacy_policy">By signing up, you’ll agree to our Terms of Service and Privacy Policy</string>
+    <string name="age_group">Your Age Group</string>
+    <string name="privacy_policy_text">Privacy Policy</string>
+    <string name="terms">Terms of Service</string>
+    <string name="terms_and_conditions">Terms &amp; Conditions</string>
+    <string name="current_address">Current address</string>
+    <string name="address">Address</string>
+    <string name="zip_code">Zip code</string>
+    <string name="dob">DOB</string>
+    <string name="interest">Interests</string>
+    <string name="interests_ques">Interests?</string>
+    <string name="skills">Skills</string>
+    <string name="skills_attributes">Skills/Attributes</string>
+    <string name="profile_setup">Profile set-up</string>
+    <string name="update">Update</string>
+    <string name="plrase_specify">Please Specify</string>
+    <string name="please_upload_pic">Please upload your profile picture.</string>
+    <string name="please_upload_logo">Please upload your logo.</string>
+    <string name="upload_pic"><u>Upload Profile Picture</u></string>
+    <string name="upload_logo"><u>Upload Your Logo</u></string>
+    <string name="finish">Finish</string>
+    <string name="user_type">User Type Selection</string>
+    <string name="select_user_type">Creating Your Unique Profile Based on Your Selection</string>
+    <string name="usertype1">Helping Hands</string>
+    <string name="usertype2">Individual job giver</string>
+    <string name="usertype3">Company</string>
+    <string name="need_help">Need Help</string>
+    <string name="no_internet">Please check your internet connection and try again.</string>
+    <string name="verify">Verify</string>
+    <string name="enter_mail_for_verify">Please enter your email for verification</string>
+    <string name="enter_mail">Enter Your Email!</string>
+    <string name="already_have_account"><font color="#A1A1A1">Already have an account?</font> Sign In</string>
+    <string name="enter_otp">Enter your 6-digit OTP</string>
+    <string name="message_otp">We have sent a OTP to the email address %1$s</string>
+    <string name="verify_mail">Verify Email</string>
+    <string name="continue_btn_text">Continue</string>
+    <string name="home_search_hint">Search for Company, People, Jobs or Hastags</string>
+    <string name="feed_text">Feed</string>
+    <string name="all">All</string>
+    <string name="company">Company</string>
+    <string name="job_status">Job Status</string>
+    <string name="gigzz">Gigzz</string>
+    <string name="get_help">Get Help</string>
+    <string name="gigzz_desc">For teens looking for jobs &amp; gigzz</string>
+    <string name="get_help_desc">For people who need help with odd jobs</string>
+    <string name="company_desc">Recruiting talented teens</string>
+    <string name="no_block_user">Yay! No Blocked Users!</string>
+    <string name="no_block_user_msg">You haven’t blocked anyone.Your block list is empty.</string>
+    <string name="no_post_found">Oops! No Posts Yet!</string>
+    <string name="no_post_text">Looks like this user hasn’t posted anything yet!</string>
+    <string name="no_connection">No Connections Yet!</string>
+    <string name="no_requests">No Requests Found!</string>
+    <string name="no_messages">No Messages Yet!</string>
+    <string name="no_comments">No Comments Yet!</string>
+    <string name="profile_state">introduce yourself to the others.</string>
+    <string name="your_mail">Email</string>
+    <string name="gender">Gender</string>
+    <string name="your_age_group">Your Age Group</string>
+    <string name="parent_mail">Parent Mail Id</string>
+    <string name="brief">Describe yourself</string>
+    <string name="permit">Work permit</string>
+    <string name="Add">Address</string>
+    <string name="please_specify">Please specify</string>
+    <string name="basic_details">Basic Details</string>
+    <string name="enter_details">Enter your personal details below.</string>
+    <string name="enter_dob">Enter your date of birth.</string>
+    <string name="details">Please provide some Basic details about yourself.</string>
+    <string name="hiring_name">Hiring Name</string>
+    <string name="job_address">Company Address</string>
+    <string name="company_des">Company Description</string>
+    <string name="job_title">Job Title</string>
+    <string name="industry">Industry Type</string>
+    <string name="begin_text">Explore Engaging Projects and Earn For Your Skills.</string>
+    <string name="designation">Assistant Manager</string>
+    <string name="job_experience">1+ year</string>
+    <string name="opportunity">Opportunities</string>
+    <string name="no_opportunity">No Opportunities Available!</string>
+    <string name="company_details">Enter company details below.</string>
+    <string name="job_desc">Job Details</string>
+    <string name="details_job">Enter Job details below.</string>
+    <string name="no_likes">No Likes Yet!</string>
+    <string name="no_notification">No Notification Yet!</string>
+    <string name="no_jobs">No Jobs Available!</string>
+    <string name="no_filter_jobs">No filter data were found, please filter data again</string>
+    <string name="no_post">No Post Available!</string>
+    <string name="no_msg_body">No message in your chat history.\nStart chatting with your connections today!</string>
+    <string name="no_chat_msg">It seems you both didn’t had conversation!\nStart your conversation today.</string>
+    <string name="no_requests_msg">You currently don\'t have any Pending Requests.</string>
+    <string name="no_connection_msg">You currently don\'t have any connections.Send connection requests and expand your network.</string>
+    <string name="no_review">Oops! No Reviews Yet!</string>
+    <string name="no_review_msg">The user doesn\'t have any reviews to display at the moment.</string>
+    <string name="connect">Connect</string>
+    <string name="school">School</string>
+    <string name="lorem_ipsum">Lorem Ipsum</string>
+    <string name="grade_degree">Grade/ Degree</string>
+    <string name="start_year">Start Year</string>
+    <string name="end_year">End Year</string>
+    <string name="company_profile">Company Profile</string>
+    <string name="get_help_2">Get Help!</string>
+    <string name="detail_passion">Discover New Opportunities to Make Money. Start here. List all the Areas You are Interested in.</string>
+    <string name="get_help_subtitle">Need an extra hand with yard work? Looking for a tutor for your children? Connect with local teens who are ready to help!</string>
+    <string name="education_details">Education Details</string>
+    <string name="your_education_details">Let people know about your education.</string>
+    <string name="lorem_ipsum_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="dummy_date">Posted on 06/12/2024</string>
+    <string name="posted_jobs">Posted Jobs</string>
+    <string name="new_jobs">New Job</string>
+    <string name="job_seeker">Job Seeker</string>
+    <string name="action_connect">Connect +</string>
+    <string name="requests">Requests</string>
+    <string name="delete_your_comments">Do you want to delete your comments?</string>
+    <string name="delete_your_posts">Do you want to delete your posts?</string>
+    <string name="delete_comment">Delete Comment</string>
+    <string name="delete_notification">Delete Notification</string>
+    <string name="delete_post">Delete Post</string>
+    <string name="requested">Requested</string>
+    <string name="matching_profile">Matching Profile</string>
+    <string name="see_all"><u>See All</u></string>
+    <string name="notification">Notifications</string>
+    <string name="share">Share</string>
+    <string name="report">Report</string>
+    <string name="profile_lock_heading">Profile is locked</string>
+    <string name="profile_lock_msg">Kindly send a connection request, to view their profile and their connections </string>
+    <string name="create_post">Create Post</string>
+    <string name="post">Post</string>
+    <string name="everyone">Everyone</string>
+    <string name="share_thoughts">Share your thoughts!</string>
+    <string name="editText">Edit</string>
+    <string name="edit">Edit Post</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_profile_des">Edit your contact details</string>
+    <string name="edit_detail_subtitle">Edit the details as per your requirement</string>
+    <string name="enter_country_name">Please enter country name!</string>
+    <string name="country">Country</string>
+    <string name="no_industry">No industry type available!</string>
+    <string name="enter_description">Please enter description!</string>
+    <string name="edit_comment">Edit Comment</string>
+    <string name="report_comment">Report Comment</string>
+    <string name="block_user">Block User</string>
+    <string name="report_user">Report User</string>
+    <string name="connection_only">Connection only</string>
+    <string name="delete">Delete</string>
+    <string name="accept">Accept</string>
+    <string name="applicants">Applicants</string>
+    <string name="new_chat">New Chat</string>
+    <string name="connections">Connections</string>
+    <string name="rating">Rating</string>
+    <string name="overview">Overview</string>
+    <string name="location">Location</string>
+    <string name="contact">Contact</string>
+    <string name="education">Education</string>
+    <string name="resume">Resume</string>
+    <string name="say_hi">Say Hi</string>
+    <string name="msg_hint">Type a message ..</string>
+    <string name="block_username">Block %1$s</string>
+    <string name="block_subheading"><![CDATA[They won’t be able to find your profile & posts. We won’t let them know you blocked them.]]></string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="clear_chat">Clear Chat</string>
+    <string name="send">Send</string>
+    <string name="share_app">Share App</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="logout">Log Out</string>
+    <string name="logout_title">Logout</string>
+    <string name="job_type">Job Type</string>
+    <string name="salary">Salary/Hourly</string>
+    <string name="job_description">Job Description</string>
+    <string name="posting_review_publicly">Posting Review Publicly</string>
+    <string name="rating_title">Your Overall Rating for %1$s</string>
+    <string name="profile">Profile</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="college_duration">%1$s - %2$s</string>
+    <string name="currently_pursuing">Currently pursuing</string>
+    <string name="edit_education">Edit Education</string>
+    <string name="edit_education_sub_title">Choose the education you want to edit</string>
+    <string name="add_new_edu">Add a new education</string>
+    <string name="job_start_time_msg">Select Job Start Time</string>
+    <string name="job_start_day_msg">Select Job Start Day</string>
+    <string name="job_end_time_msg">Select Job End Time</string>
+    <string name="job_end_day_msg">Select Job End Day</string>
+    <string name="enter_company_name">Please enter company name!</string>
+    <string name="enter_school_name">Please enter school/ college name!</string>
+    <string name="enter_grade">Please enter grade/ degree!</string>
+    <string name="enter_start_year">Please enter start year</string>
+    <string name="enter_end_year">Please enter end year!</string>
+    <string name="add_a_new_education">Add a new education</string>
+    <string name="add">Add</string>
+    <string name="manual_permission_txt" translatable="false"><![CDATA[Allow Ubteo to access device\'s location for smooth working of the app functionality. Please allow the permission through Settings screen. \n\nSelect Permissions -> Enable Permission]]></string>
+    <string name="permit_txt">Permit Manually</string>
+    <string name="places_api_key">AIzaSyDZtleUi7dECu4s3-wT635TXIFakG7gsNA</string>
+    <string name="enter_your_address">Please enter your address!</string>
+    <string name="enter_your_phone">Please enter phone number!</string>
+    <string name="enter_your_valid_phone">Please enter valid phone number!</string>
+    <string name="enter_company_number">Please enter company number!</string>
+    <string name="enter_state_name">Please enter state!</string>
+    <string name="enter_bio">Please enter your bio!</string>
+    <string name="select_category">Please select category!</string>
+    <string name="choose_experience">Please choose whether you require experience or not!</string>
+    <string name="enter_year_of_experience">Please enter year of experience!</string>
+    <string name="valid_year_of_experience">Year of experience can not be zero!</string>
+    <string name="enter_company_address">Please enter company\'s address!</string>
+    <string name="enter_job_title">Please enter job title!</string>
+    <string name="enter_contact_number">Please enter contact number!</string>
+    <string name="enter_zipcode">Please enter zipcode!</string>
+    <string name="enter_valid_zipcode">Please enter valid zipcode!</string>
+    <string name="enter_salary">Please enter salary!</string>
+    <string name="enter_compensation">Please enter compensation!</string>
+    <string name="enter_valid_salary">Salary should be less or equal to 10000!</string>
+    <string name="enter_valid_compensation">Compensation should be less or equal to 10000!</string>
+    <string name="valid_compensation">Compensation should\'t be zero!</string>
+    <string name="less_zero_compensation">Compensation should\'t be zero or less then zero!</string>
+    <string name="no_result">Oops! No result Found</string>
+    <string name="search_error_msg">We couldn’t find the item you were looking for.
+Please check spell error and search again.</string>
+    <string name="valid_salary">Salary can\'t be zero!</string>
+    <string name="less_zero_salary">Salary can\'t be zero or less than zero!</string>
+    <string name="valid_hours">Hours can\'t be zero!</string>
+    <string name="edit_skills">Edit Skill</string>
+    <string name="edit_skills_text">Edit the skills as per your experience</string>
+    <string name="action_unblock">Unblock</string>
+    <string name="post_job">Post Job</string>
+    <string name="post_new_job">Post New Job</string>
+    <string name="posted_job">Posted Jobs</string>
+    <string name="all_job">All Jobs</string>
+    <string name="applied_job">Applied Jobs</string>
+    <string name="apply_filter">Apply Filter</string>
+    <string name="notification_text">Alias mentioned you in a comment</string>
+    <string name="my_jobs">My Jobs</string>
+    <string name="total_experience">%1$s years+</string>
+    <string name="no_experience">No experience</string>
+    <string name="no_experience_required">No experience required</string>
+    <string name="total_hours">%1$s hours</string>
+    <string name="total_salary">%1$s/hour</string>
+    <string name="slider_radius">%1$dMiles</string>
+    <string name="job_name">Job Name</string>
+    <string name="company_name">Company Name</string>
+    <string name="urban_crew">Urban Crew</string>
+    <string name="job_category">Category</string>
+    <string name="job_category_type">Write your category.......</string>
+    <string name="job_compensation">Compensation</string>
+    <string name="job_description_txt">Write a job description</string>
+    <string name="job_checkbox">Accept teens without experience with parent supervision</string>
+    <string name="full_time">Full Time</string>
+    <string name="flag_reason">Flag Reason</string>
+    <string name="part_time">Part Time</string>
+    <string name="both">Both</string>
+    <string name="in_process">In Progress</string>
+    <string name="in_review">In Review</string>
+    <string name="completed">Completed</string>
+    <string name="apply_job">Apply</string>
+    <string name="view_all">View All</string>
+    <string name="top_applicants">Top Applicants</string>
+    <string name="please_provide_your_feedback">Please provide your feedback</string>
+    <string name="submit">Submit</string>
+    <string name="payment">Salary</string>
+    <string name="people">People</string>
+    <string name="jobs">Jobs</string>
+    <string name="about_user">About</string>
+    <string name="posts">Posts</string>
+    <string name="user_review">Reviews</string>
+    <string name="_50_miles">- 50 Miles</string>
+    <string name="_0_miles">0 Miles</string>
+    <string name="types_of_gigzz">Types of Gigzz</string>
+    <string name="filters">Filters</string>
+    <string name="age_requirement">Age Requirement</string>
+    <string name="optional">Optional</string>
+    <string name="experience_required">Experienced required</string>
+    <string name="enter_experience">Enter your experience....</string>
+    <string name="reset">Reset</string>
+    <string name="last_24_hours">Last 24 Hours</string>
+    <string name="last_3_days">Last 3 days</string>
+    <string name="last_week">Last Week</string>
+    <string name="last_15_days">Last 15 Days</string>
+    <string name="open">Open</string>
+    <string name="radius">Radius</string>
+    <string name="posted_time">Posted Time</string>
+    <string name="experience">Experience</string>
+    <string name="apply">Apply</string>
+    <string name="job_details">Job Details</string>
+    <string name="applied">Applied</string>
+    <string name="add_review">Add Review</string>
+    <string name="review_subtitle">Kindly share your experience of working at test</string>
+    <string name="new_job_headline">Post a New Job</string>
+    <string name="new_job_sub_head">Fill out the following details to add a job</string>
+    <string name="hired">Hired</string>
+    <string name="rejected">Rejected</string>
+    <string name="comments">Comments</string>
+    <string name="write_your_comment">Write your comment</string>
+    <string name="add_comments">Add your comment</string>
+    <string name="delete_account_message">Are you sure you want to delete your Gigzz account?</string>
+    <string name="logout_message">Are you sure you want to log out?</string>
+    <string name="passion">Passion</string>
+    <string name="project">Project</string>
+    <string name="job_location">Job Location</string>
+    <string name="remote">Remote</string>
+    <string name="onsite">Onsite</string>
+    <string name="add_image_title">Upload your company photos \nMax. 5 (Optional)</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="web_url">Web URL</string>
+    <string name="job_hours">Number of hours</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="compensation">Compensation</string>
+    <string name="slider_radius_dash">-%1$dMiles</string>
+    <string name="slider_payment_dash">-$%1$d</string>
+    <string name="slider_payment">$%1$d</string>
+    <string name="start_date">Start Date\n</string>
+    <string name="end_date">End Date</string>
+    <string name="teen">Teens</string>
+
+    <string-array name="job_status">
+        <item>Hired</item>
+        <item>Rejected</item>
+        <item>Interview</item>
+    </string-array>
+
+    <string-array name="people_seen">
+        <item>Everyone</item>
+        <item>Connection only</item>
+    </string-array>
+    <string-array name="experience_required">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="profile_options">
+        <item>Company</item>
+        <item>Individual Job Giver</item>
+        <item>Job Seeker</item>
+        <item>All</item>
+    </string-array>
+
+    <string-array name="profile_array">
+        <item>@string/about_user</item>
+        <item>@string/posts</item>
+        <item>@string/jobs</item>
+        <item>@string/user_review</item>
+    </string-array>
+    <string-array name="tab_array">
+        <item>@string/about_user</item>
+        <item>@string/posts</item>
+        <item>@string/user_review</item>
+    </string-array>
+
+    <string-array name="candidate_profile_array">
+        <item>@string/profile</item>
+        <item>@string/posts</item>
+        <item>@string/user_review</item>
+    </string-array>
+
+    <string-array name="job_pay_value">
+        <item>0</item>
+        <item>10000</item>
+    </string-array>
+
+    <string-array name="gender_options">
+        <item>He/Him</item>
+        <item>She/Her</item>
+        <item>They/Them</item>
+        <item>I do not want to share any pronouns</item>
+        <item>Other (please specify)</item>
+        <!--<item>Male</item>
+        <item>Female</item>
+        <item>Other</item>-->
+    </string-array>
+</resources>

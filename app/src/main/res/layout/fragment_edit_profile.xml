@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_shade_1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profile.EditProfileFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="12dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".97" />
+
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_icon_blue"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+    <TextView
+        android:id="@+id/profileEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/edit_profile"
+        android:textAppearance="@style/TextAppearance.Gigzz.Body3"
+        app:layout_constraintStart_toEndOf="@id/back_btn"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTop" />
+
+    <TextView
+        android:id="@+id/profileEditTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_profile_des"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintStart_toStartOf="@id/profileEdit"
+        app:layout_constraintTop_toBottomOf="@id/profileEdit" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_address"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/text_input_stroke_selector"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/profileEditTxt"
+        app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent"
+        app:startIconDrawable="@drawable/location"
+        app:startIconTint="@color/theme_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:focusableInTouchMode="false"
+            android:textAppearance="?textAppearanceCaption"
+            android:hint="@string/address"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_postcard"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/text_input_stroke_selector"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toStartOf="@id/user_state"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/user_address"
+        app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent"
+        app:startIconDrawable="@drawable/ic_card"
+        app:startIconTint="@color/theme_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textAppearance="?textAppearanceCaption"
+            android:hint="@string/zip_code"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_state"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/text_input_stroke_selector"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toEndOf="@id/user_postcard"
+        app:layout_constraintTop_toBottomOf="@id/user_address"
+        app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent"
+        app:startIconDrawable="@drawable/ic_location_map"
+        app:startIconTint="@color/theme_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:ellipsize="end"
+            android:inputType="text"
+            android:maxLines="1"
+            android:focusableInTouchMode="false"
+            android:textAppearance="?textAppearanceCaption"
+            android:hint="@string/country"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_phone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/text_input_stroke_selector"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/user_postcard"
+        app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconTint="@color/theme_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:textAppearance="?textAppearanceCaption"
+            android:hint="@string/contact" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/text_input_stroke_selector"
+        app:hintEnabled="false"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/user_phone"
+        app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent"
+        app:startIconDrawable="@drawable/ic_mail"
+        app:startIconTint="@color/theme_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress"
+            android:focusableInTouchMode="false"
+            android:textAppearance="?textAppearanceCaption"
+            tools:text="abc@yopmail.com" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_bio"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:scrollbars="vertical"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/text_input_stroke_selector"
+        app:counterEnabled="true"
+        app:counterMaxLength="250"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/user_email"
+        app:shapeAppearanceOverlay="?shapeAppearanceSmallComponent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:gravity="top"
+            android:maxLength="250"
+            android:inputType="textMultiLine|textImeMultiLine"
+            android:textAppearance="?textAppearanceCaption"
+            android:hint="@string/enter_description"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/save_changes"
+        android:backgroundTint="@color/theme_blue"
+        android:textAppearance="@style/TextAppearance.Gigzz.Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/theme_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

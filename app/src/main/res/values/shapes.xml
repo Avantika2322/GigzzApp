@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ShapeAppearance.Gigzz.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/gigzz_small_component_corner_radius</item>
+    </style>
+
+    <style name="ShapeAppearance.Gigzz.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/gigzz_medium_component_corner_radius</item>
+    </style>
+
+    <style name="ShapeAppearance.Gigzz.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/gigzz_large_component_corner_radius</item>
+    </style>
+
+
+    <dimen name="gigzz_small_component_corner_radius">@dimen/_10sdp</dimen>
+    <dimen name="gigzz_medium_component_corner_radius">0dp</dimen>
+    <dimen name="gigzz_large_component_corner_radius">@dimen/_13sdp</dimen>
+
+</resources>

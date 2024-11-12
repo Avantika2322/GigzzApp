@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/bottom_home_selector"
+        android:title="Home" />
+    <item
+        android:id="@+id/connectionFragment"
+        android:icon="@drawable/bottom_circle_selector"
+        android:title="Circle" />
+    <item
+        android:id="@+id/addPostFragment"
+        android:title="" />
+    <item
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/bottom_chat_selector"
+        android:title="Chat" />
+    <item
+        android:id="@+id/jobsFragment"
+        android:icon="@drawable/bottom_job_selector"
+        android:title="Jobs" />
+</menu>
